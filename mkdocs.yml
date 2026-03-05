@@ -1,0 +1,9 @@
+site_name: My Data Science Learning Project
+theme:
+  name: material
+
+plugins:
+  - mkdocs-jupyter
+
+nav:
+  - The Delta Method Explained: The Delta Method Explained.ipynb

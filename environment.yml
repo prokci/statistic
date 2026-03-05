@@ -1,0 +1,34 @@
+name: python
+channels:
+  - defaults
+dependencies:
+  - bzip2
+  - ca-certificates
+  - expat
+  - libexpat
+  - libffi
+  - libzlib
+  - openssl
+  - pip
+  - python
+  - setuptools
+  - sqlite
+  - tk
+  - wheel
+  - xz
+  - zlib
+  - pip:
+      - mkdocs
+      - mkdocs-get-deps
+      - mkdocs-jupyter
+      - mkdocs-material
+      - mkdocs-material-extensions
+      - numpy
+      - pandas
+      - scikit-learn
+      - scikit-optimize
+      - scipy
+      - statsmodels
+      - tqdm
+      - matplotlib
+

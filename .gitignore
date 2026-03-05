@@ -1,0 +1,12 @@
+*.npy
+*.tsv
+*.csv
+*.png
+*.jpg
+*.jpeg
+*.tfevents
+*.json
+
+.env
+.venv
+.vscode/
