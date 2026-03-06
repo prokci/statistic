@@ -27,4 +27,4 @@ jobs:
       - name: Check notebooks with papermill
         run: |
           pip install papermill
-          papermill "docs/The Delta Method Explained.ipynb"
+          papermill "docs/The Delta Method Explained.ipynb" "docs/The Delta Method Explained.ipynb"
