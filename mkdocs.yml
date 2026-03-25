@@ -6,4 +6,5 @@ plugins:
   - mkdocs-jupyter
 
 nav:
+  - Home: index.md
   - The Delta Method Explained: The Delta Method Explained.ipynb
