@@ -1,0 +1,30 @@
+name: Deploy content to Pages
+
+on:
+  workflow_run:
+    workflows: ["Check notebooks with papermill"]
+    types:
+      - completed
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          pip install mkdocs mkdocs-material mkdocs-jupyter
+          mkdocs gh-deploy --force
